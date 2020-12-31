@@ -39,6 +39,7 @@ const ProfileView = ({ data }) => {
             <div>users list (client rendered) : {JSON.stringify(data2)}</div>
             <br/>
             <div>users data (server rendered) : {JSON.stringify(data)}</div>
+            <img src={data?.picture} width="300" height="300"/>
         </>
     )
 }
