@@ -30,6 +30,8 @@ const ProfileView = ({ data }) => {
                 </title>
                 <meta property="og:image" content={data?.picture}/>
                 <meta property="og:description" content={data?.email}/>
+                <meta property="og:image:width" content="128" />
+                <meta property="og:image:height" content="128" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <p>User ID: {profileID}</p>
