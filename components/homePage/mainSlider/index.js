@@ -1,48 +1,114 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Slider from 'react-slick'
 import styles from './MainSlider.module.css'
+import axios from 'axios'
 
-export default function MainSlider() {
+export default function MainSlider({ title, filterBy }) {
     const settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: 6,
+        slidesToScroll: 6,
+        // autoplay: true,
+        autoplaySpeed: 10000,
+        responsive: [
+            {
+                breakpoint: 925,
+                settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 5,
+                },
+            },
+            {
+                breakpoint: 770,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                },
+            },
+            {
+                breakpoint: 630,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                },
+            },
+            {
+                breakpoint: 465,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                },
+            },
+        ],
+        nextArrow: <></>,
+        prevArrow: <></>,
+    }
+
+    const [movies, setMovies] = useState([])
+
+    useEffect(() => {
+        axios
+            .get(
+                `https://yts.mx/api/v2/list_movies.json?sort_by=${filterBy}`
+            )
+            .then((res) => {
+                setMovies(res.data.data.movies)
+            })
+    }, [])
+
+    const sliderRef = React.createRef()
+
+    const gotoNext = () => {
+        sliderRef.current.slickNext()
+    }
+
+    const gotoPrev = () => {
+        sliderRef.current.slickPrev()
     }
 
     return (
-        <div className={styles["main-slider-container"]}>
-            {/* <h2> Multiple items </h2>
-            <Slider {...settings}>
+        <div className={styles['main-slider-container']}>
+            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <h2 style={{ marginLeft: '15px' }}>{title}</h2>
                 <div>
-                    <h3>1</h3>
+                    <img
+                        src="/left-arrow.svg"
+                        className={styles.arrows}
+                        onClick={gotoPrev}
+                    />
+                    <img
+                        src="/right-arrow.svg"
+                        className={styles.arrows}
+                        onClick={gotoNext}
+                    />
                 </div>
-                <div>
-                    <h3>2</h3>
-                </div>
-                <div>
-                    <h3>3</h3>
-                </div>
-                <div>
-                    <h3>4</h3>
-                </div>
-                <div>
-                    <h3>5</h3>
-                </div>
-                <div>
-                    <h3>6</h3>
-                </div>
-                <div>
-                    <h3>7</h3>
-                </div>
-                <div>
-                    <h3>8</h3>
-                </div>
-                <div>
-                    <h3>9</h3>
-                </div>
-            </Slider> */}
+            </div>
+            <Slider {...settings} ref={sliderRef}>
+                {movies &&
+                    movies.map((movie) => (
+                        <div
+                            style={{
+                                alignItems: 'center',
+                                marginBottom: '200px',
+                                userSelect: 'none',
+                            }}
+                        >
+                            <img
+                                className={styles['movie-cover']}
+                                src={movie.large_cover_image}
+                                style={{
+                                    maxWidth: '150px',
+                                    textAlign: 'center',
+                                    borderRadius: '10px',
+                                    userSelect: 'none',
+                                }}
+                                alt={movie.title}
+                            />
+                        </div>
+                    ))}
+            </Slider>
         </div>
     )
 }

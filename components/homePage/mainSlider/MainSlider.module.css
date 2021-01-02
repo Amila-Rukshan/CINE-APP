@@ -1,7 +1,23 @@
 .main-slider-container {
-    margin-top: 30px;
     /* position: relative; */
     float: left;
     width: 100%;
-    display: flex;
+    user-select: none;
+}
+
+.movie-cover { 
+    -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(20%, transparent) , to(rgba(250, 250, 250, 0.1)));
+    border-radius: 10px !important;
+    margin: 0 auto;
+}
+
+.arrows {
+    opacity: 0.5;
+    padding: 15px;
+    /* align-self: flex-end; */
+    text-align: right;
+}
+
+.arrows:hover {
+    opacity: 1;
 }

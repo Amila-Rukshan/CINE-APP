@@ -57,7 +57,7 @@ export default function NavBar() {
                                     >
                                         <img
                                             src={movie.small_cover_image}
-                                            style={{ borderRadius: '3px' }}
+                                            style={{ borderRadius: '3px', minWidth: '45px' }}
                                         />
                                         <div
                                             style={{
