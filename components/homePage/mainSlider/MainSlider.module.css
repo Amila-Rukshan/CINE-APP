@@ -1,0 +1,7 @@
+.main-slider-container {
+    margin-top: 30px;
+    /* position: relative; */
+    float: left;
+    width: 100%;
+    display: flex;
+}

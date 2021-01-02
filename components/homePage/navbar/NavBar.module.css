@@ -8,6 +8,9 @@
     padding: 0;
     color: #ffffff;
     float: left;
+    position: -webkit-sticky; 
+    position: sticky;
+    top: 0;
 }
 
 .container {
@@ -62,6 +65,31 @@
 
 .search-container input:focus {
     outline: none;
+}
+
+.search-results {
+    position: absolute;
+    margin-top: 47px;
+    width: 270px;
+    margin-left: 10px;
+    max-height: 462px;
+    overflow-y: auto;
+    backdrop-filter: blur(10px);
+}
+
+.search-item {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    cursor: pointer;
+    user-select: none;
+    min-height: 67px;
+}
+
+.search-item:hover {
+    background-color: rgba(109, 107, 107, 0.432);
+    padding: 5px;
+    cursor: pointer;
+    user-select: none;
 }
 
 @media(max-width: 425px) {
