@@ -4,4 +4,10 @@ Check out [the movie torrent downloading app](https://next-js-handson-three.verc
 
 # Screen captures
 
-![alt text](https://github.com/Amila-Rukshan/NextJS-hands-on/blob/main/screenshots/Screenshot%202021-01-02%20at%2023.31.07.png)
+![home page](https://github.com/Amila-Rukshan/NextJS-hands-on/blob/main/screenshots/Screenshot%202021-01-02%20at%2023.31.07.png)
+
+
+![movie page](https://github.com/Amila-Rukshan/NextJS-hands-on/blob/main/screenshots/Screenshot%202021-01-02%20at%2023.31.28.png)
+
+
+![movie search](https://github.com/Amila-Rukshan/NextJS-hands-on/blob/main/screenshots/Screenshot%202021-01-02%20at%2023.32.39.png)
