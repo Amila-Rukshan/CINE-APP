@@ -7,11 +7,11 @@
     margin: 0;
     padding: 0;
     color: #ffffff;
-    float: left;
-    position: -webkit-sticky; 
-    position: sticky;
-    top: 0;
     z-index: 1000;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0; /* required */
+    display: block;
 }
 
 .container {
@@ -76,6 +76,7 @@
     max-height: 462px;
     overflow-y: auto;
     backdrop-filter: blur(10px);
+    z-index: 1000 !important;
 }
 
 .search-item {

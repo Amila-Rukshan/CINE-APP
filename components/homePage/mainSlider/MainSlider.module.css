@@ -3,6 +3,7 @@
     float: left;
     width: 100%;
     user-select: none;
+    z-index: 0;
 }
 
 .movie-cover { 
@@ -11,13 +12,26 @@
     margin: 0 auto;
 }
 
+.movie-cover {
+    transform: scale(1.01); 
+}
+
 .arrows {
     opacity: 0.5;
     padding: 15px;
+    margin-top: 10px;
     /* align-self: flex-end; */
     text-align: right;
 }
 
 .arrows:hover {
     opacity: 1;
+}
+
+.slider-item {
+    transition: transform .2s;
+}
+
+.slider-item {
+    /* transform: scale(1.01);  */
 }

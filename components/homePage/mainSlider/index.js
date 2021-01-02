@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Slider from 'react-slick'
 import styles from './MainSlider.module.css'
 import axios from 'axios'
+import Link from 'next/link'
 
 export default function MainSlider({ title, filterBy }) {
     const settings = {
@@ -9,7 +10,7 @@ export default function MainSlider({ title, filterBy }) {
         infinite: true,
         speed: 500,
         slidesToShow: 6,
-        slidesToScroll: 6,
+        slidesToScroll: 2,
         // autoplay: true,
         autoplaySpeed: 10000,
         responsive: [
@@ -17,28 +18,28 @@ export default function MainSlider({ title, filterBy }) {
                 breakpoint: 925,
                 settings: {
                     slidesToShow: 5,
-                    slidesToScroll: 5,
+                    slidesToScroll: 1,
                 },
             },
             {
                 breakpoint: 770,
                 settings: {
                     slidesToShow: 4,
-                    slidesToScroll: 4,
+                    slidesToScroll: 1,
                 },
             },
             {
                 breakpoint: 630,
                 settings: {
                     slidesToShow: 3,
-                    slidesToScroll: 3,
+                    slidesToScroll: 1,
                 },
             },
             {
                 breakpoint: 465,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 2,
+                    slidesToScroll: 1,
                 },
             },
         ],
@@ -68,6 +69,8 @@ export default function MainSlider({ title, filterBy }) {
         sliderRef.current.slickPrev()
     }
 
+    console.log(movies)
+
     return (
         <div className={styles['main-slider-container']}>
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -88,10 +91,12 @@ export default function MainSlider({ title, filterBy }) {
             <Slider {...settings} ref={sliderRef}>
                 {movies &&
                     movies.map((movie) => (
+                        <Link href={`/movie/${movie.id}`}>
                         <div
+                            className={styles['slider-item']}
                             style={{
                                 alignItems: 'center',
-                                marginBottom: '200px',
+                                // marginBottom: '200px',
                                 userSelect: 'none',
                             }}
                         >
@@ -107,6 +112,7 @@ export default function MainSlider({ title, filterBy }) {
                                 alt={movie.title}
                             />
                         </div>
+                        </Link>
                     ))}
             </Slider>
         </div>

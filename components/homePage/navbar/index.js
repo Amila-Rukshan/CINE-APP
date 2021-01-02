@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import styles from './NavBar.module.css'
 import axios from 'axios'
+import Link from 'next/link'
 
 export default function NavBar() {
     const [movies, setMovies] = useState([])
@@ -26,11 +27,13 @@ export default function NavBar() {
     return (
         <div className={styles['navbar-wrapper']}>
             <div className={styles.container}>
-                <img
-                    src="/logo.svg"
-                    height={60}
-                    className={styles['app-logo']}
-                />
+                <Link href="/">
+                    <img
+                        src="/logo.svg"
+                        height={60}
+                        className={styles['app-logo']}
+                    />
+                </Link>
                 <div className={styles['search-container']}>
                     <input
                         placeholder="Movie Search"
@@ -41,7 +44,7 @@ export default function NavBar() {
                             setSerachTerm(e.target.value)
                         }}
                         onFocus={() => setShow(true)}
-                        onBlur={() => setShow(false)}
+                        // onBlur={() => setShow(false)}
                     />
                     <img
                         src="/search-icon.svg"
@@ -51,40 +54,51 @@ export default function NavBar() {
                         <div className={styles['search-results']}>
                             {movies &&
                                 movies.map((movie) => (
-                                    <div
-                                        className={styles['search-item']}
-                                        style={{ display: 'flex' }}
-                                    >
-                                        <img
-                                            src={movie.small_cover_image}
-                                            style={{ borderRadius: '3px', minWidth: '45px' }}
-                                        />
+                                    <Link href={`/movie/${movie.id}`}>
                                         <div
-                                            style={{
-                                                display: 'flex',
-                                                flexDirection: 'column',
-                                            }}
+                                            className={styles['search-item']}
+                                            style={{ display: 'flex' }}
+                                            onClick={() =>
+                                                setTimeout(() => {
+                                                    setShow(false)
+                                                    setSerachTerm('')
+                                                }, 1000)
+                                            }
                                         >
+                                            <img
+                                                src={movie.small_cover_image}
+                                                style={{
+                                                    borderRadius: '3px',
+                                                    minWidth: '45px',
+                                                }}
+                                            />
                                             <div
                                                 style={{
-                                                    fontSize: '16px',
-                                                    marginLeft: '5px',
-                                                    color: '#FFBB00',
+                                                    display: 'flex',
+                                                    flexDirection: 'column',
                                                 }}
                                             >
-                                                {movie.title_english}
-                                            </div>
-                                            <div
-                                                style={{
-                                                    fontSize: '14px',
-                                                    marginLeft: '5px',
-                                                    marginTop: '5px',
-                                                }}
-                                            >
-                                                {movie.year}
+                                                <div
+                                                    style={{
+                                                        fontSize: '16px',
+                                                        marginLeft: '5px',
+                                                        color: '#FFBB00',
+                                                    }}
+                                                >
+                                                    {movie.title_english}
+                                                </div>
+                                                <div
+                                                    style={{
+                                                        fontSize: '14px',
+                                                        marginLeft: '5px',
+                                                        marginTop: '5px',
+                                                    }}
+                                                >
+                                                    {movie.year}
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </Link>
                                 ))}
                         </div>
                     )}
