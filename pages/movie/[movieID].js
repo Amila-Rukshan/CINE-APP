@@ -21,7 +21,7 @@ const MovieView = ({ movie }) => {
     return (
         <>
             <Head>
-                <title>{movie.title_english}</title>
+                <title>{movie.title_english} | CINE APP</title>
                 <meta property="og:image" content={movie.large_cover_image} />
                 <meta
                     property="og:description"
