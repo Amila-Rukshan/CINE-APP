@@ -8,6 +8,7 @@ export default function Home() {
             <Head>
                 <title>CINE APP</title>
                 <link rel="icon" href="/favicon.ico" />
+                <script data-ad-client="ca-pub-2228533750363168" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
             </Head>
             <div className="page-container">
                 <MainSlider title="Latest Movies" filterBy="year" />
