@@ -34,6 +34,18 @@ const MovieView = ({ movie }) => {
             </Head>
             <div className="page-container">
                 <div style={{ padding: '10px' }}>
+                    {/* <!-- add format one --> */}
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <ins class="adsbygoogle"
+                        style="display:block"
+                        data-ad-client="ca-pub-2228533750363168"
+                        data-ad-slot="5147353463"
+                        data-ad-format="auto"
+                        data-full-width-responsive="true"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                    {/* <!-- add format one --> */}
                     <a
                         href={`https://www.imdb.com/title/${movie.imdb_code}`}
                         target="_blank"
