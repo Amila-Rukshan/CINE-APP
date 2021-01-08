@@ -69,8 +69,6 @@ export default function MainSlider({ title, filterBy }) {
         sliderRef.current.slickPrev()
     }
 
-    console.log(movies)
-
     return (
         <div className={styles['main-slider-container']}>
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>

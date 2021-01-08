@@ -22,8 +22,6 @@ export default function NavBar() {
         }
     }, [serachTerm])
 
-    console.log(serachTerm)
-
     return (
         <div className={styles['navbar-wrapper']}>
             <div className={styles.container}>

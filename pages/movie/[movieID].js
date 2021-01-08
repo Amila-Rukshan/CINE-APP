@@ -15,7 +15,8 @@ const MovieView = ({ movie }) => {
     }
 
     useEffect(() => {
-        typeof window !== 'undefined' && window.addEventListener('resize', updateDimensions)
+        typeof window !== 'undefined' &&
+            window.addEventListener('resize', updateDimensions)
     }, [])
 
     return (
@@ -29,11 +30,54 @@ const MovieView = ({ movie }) => {
                 />
                 <meta property="og:image:width" content="500" />
                 <meta property="og:image:height" content="750" />
+                <script data-ad-client="ca-pub-2228533750363168" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
             </Head>
             <div className="page-container">
                 <div style={{ padding: '10px' }}>
-                    <h1 style={{ color: '#FFBB00' }}>{movie.title_english}</h1>
-                    <div style={{ display: 'flex', flexDirection: dimensions.width > 680 ? 'row' : 'column' }}>
+                    <a
+                        href={`https://www.imdb.com/title/${movie.imdb_code}`}
+                        target="_blank"
+                    >
+                        <img
+                            style={{
+                                cursor: 'pointer',
+                                padding: '10px',
+                                marginLeft: '-10px',
+                                height: '30px',
+                            }}
+                            src="/imdb.svg"
+                        />
+                    </a>
+                    <a
+                        href={`https://www.youtube.com/watch?v=${movie.yt_trailer_code}`}
+                        target="_blank"
+                    >
+                        <img
+                            style={{
+                                cursor: 'pointer',
+                                padding: '10px',
+                                height: '30px',
+                                marginLeft: '-10px',
+                            }}
+                            src="/youtube.png"
+                        />
+                    </a>
+                    <h1 style={{ color: '#FFBB00', margin: '0' }}>
+                        {movie.title_english}{' '}
+                    </h1>
+                    <div style={{ marginTop: '10px', marginBottom: '15px' }}>
+                        {movie?.genres &&
+                            movie?.genres.map((genre) => (
+                                <span style={{ padding: '3px 10px', backgroundColor: '#FFF', color: '#020916', marginRight: '5px', borderRadius: '5px' }}>{genre}</span>
+                            ))}
+                    </div>
+                    <div
+                        style={{
+                            display: 'flex',
+                            flexDirection:
+                                dimensions.width > 680 ? 'row' : 'column',
+                        }}
+                    >
                         <img
                             src={movie.large_cover_image}
                             style={{
@@ -42,7 +86,16 @@ const MovieView = ({ movie }) => {
                                 height: '450px',
                             }}
                         />
-                        <div style={{ margin: dimensions.width > 680 ? '0 10px' : '10px 0'}}>
+                        <div
+                            style={{
+                                margin:
+                                    dimensions.width > 680
+                                        ? '0 10px'
+                                        : '10px 0',
+                                textAlign: 'justify',
+                                textJustify: 'inter-word',
+                            }}
+                        >
                             {movie.description_full}
                             <div
                                 style={{

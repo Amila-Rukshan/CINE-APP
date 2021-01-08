@@ -75,7 +75,7 @@
     margin-left: 10px;
     max-height: 462px;
     overflow-y: auto;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(30px);
     z-index: 1000 !important;
 }
 
@@ -92,6 +92,10 @@
     padding: 5px;
     cursor: pointer;
     user-select: none;
+}
+
+.app-logo {
+    cursor: pointer;
 }
 
 @media(max-width: 425px) {
