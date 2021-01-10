@@ -54,8 +54,12 @@ export default function Home() {
                     }}
                 >
                     Simple! Search the movie and download the copy which fits
-                    best for you! Enjoy the movies!
+                    best for you! Happy cinema time!
                 </div>
+                <h2 style={{ fontFamily: `"Times New Roman", Times, serif`, fontSize: '24px', textAlign: 'center', color: '#FFF', fontStyle: 'italic' }}>
+                “Cinema is a matter of what's in the frame and what's out”
+― Martin Scorsese
+                </h2>
                 <MainSlider title="Latest Movies" filterBy="year" />
                 <MainSlider title="Most Loved" filterBy="like_count" />
                 <MainSlider title="Recent Uploads" filterBy="date_uploaded" />
