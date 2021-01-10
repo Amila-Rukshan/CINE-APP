@@ -8,21 +8,54 @@ export default function Home() {
             <Head>
                 <title>CINE APP</title>
                 <link rel="icon" href="/favicon.ico" />
-                <script data-ad-client="ca-pub-2228533750363168" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <script
+                    data-ad-client="ca-pub-2228533750363168"
+                    async
+                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+                ></script>
             </Head>
             <div className="page-container">
                 {/* <!-- add format one --> */}
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                <ins class="adsbygoogle"
-                    style="display:block"
+                <script
+                    async
+                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+                ></script>
+                <ins
+                    className="adsbygoogle"
+                    style={{ display: 'block' }}
                     data-ad-client="ca-pub-2228533750363168"
                     data-ad-slot="5147353463"
                     data-ad-format="auto"
-                    data-full-width-responsive="true"></ins>
+                    data-full-width-responsive="true"
+                ></ins>
                 <script>
                     (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
                 {/* <!-- add format one --> */}
+                <div
+                    style={{
+                        textAlign: 'center',
+                        margin: '10px',
+                        padingLeft: '10px',
+                        paddingTop: '40px',
+                        fontSize: '36px',
+                    }}
+                >
+                    Download movies for free via{' '}
+                    <span style={{ color: 'rgb(223, 163, 0)' }}>CINE APP</span>
+                </div>
+                <div
+                    style={{
+                        textAlign: 'center',
+                        margin: '10px',
+                        paddingTop: '10px',
+                        paddingBottom: '30px',
+                        fontSize: '24px',
+                    }}
+                >
+                    Simple! Search the movie and download the copy which fits
+                    best for you! Enjoy the movies!
+                </div>
                 <MainSlider title="Latest Movies" filterBy="year" />
                 <MainSlider title="Most Loved" filterBy="like_count" />
                 <MainSlider title="Recent Uploads" filterBy="date_uploaded" />

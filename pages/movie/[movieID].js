@@ -36,8 +36,8 @@ const MovieView = ({ movie }) => {
                 <div style={{ padding: '10px' }}>
                     {/* <!-- add format one --> */}
                     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                    <ins class="adsbygoogle"
-                        style="display:block"
+                    <ins className="adsbygoogle"
+                        style={{display: 'block'}}
                         data-ad-client="ca-pub-2228533750363168"
                         data-ad-slot="5147353463"
                         data-ad-format="auto"
