@@ -5,10 +5,9 @@ export default function About() {
     return (
         <div>
             <Head>
-                <title>Create Next App</title>
+                <title>About | CINE APP</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            About
         </div>
     )
 }

@@ -42,7 +42,7 @@ export default function Home() {
                     }}
                 >
                     Download movies for free via{' '}
-                    <span style={{ color: 'rgb(223, 163, 0)' }}>CINE APP</span>
+                    <span style={{ color: 'rgb(223, 163, 0)', fontWeight: 600 }}>CINE APP</span>
                 </div>
                 <div
                     style={{
@@ -56,9 +56,17 @@ export default function Home() {
                     Simple! Search the movie and download the copy which fits
                     best for you! Happy cinema time!
                 </div>
-                <h2 style={{ fontFamily: `"Times New Roman", Times, serif`, fontSize: '24px', textAlign: 'center', color: '#FFF', fontStyle: 'italic' }}>
-                “Cinema is a matter of what's in the frame and what's out”
-― Martin Scorsese
+                <h2
+                    style={{
+                        fontFamily: `"Times New Roman", Times, serif`,
+                        fontSize: '24px',
+                        textAlign: 'center',
+                        color: '#FFF',
+                        fontStyle: 'italic',
+                    }}
+                >
+                    “Cinema is a matter of what's in the frame and what's out” ―
+                    Martin Scorsese
                 </h2>
                 <MainSlider title="Latest Movies" filterBy="year" />
                 <MainSlider title="Most Loved" filterBy="like_count" />
