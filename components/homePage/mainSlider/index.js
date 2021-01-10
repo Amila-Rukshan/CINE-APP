@@ -47,7 +47,7 @@ export default function MainSlider({ title, filterBy }) {
         prevArrow: <></>,
     }
 
-    const [movies, setMovies] = useState([])
+    const [movies, setMovies] = useState([{}, {}, {}, {}, {}, {}])
 
     useEffect(() => {
         axios
@@ -89,25 +89,26 @@ export default function MainSlider({ title, filterBy }) {
             <Slider {...settings} ref={sliderRef}>
                 {movies &&
                     movies.map((movie) => (
-                        <Link href={`/movie/${movie.id}`}>
+                        <Link href={`/movie/${movie?.id || 'notfound'}`}>
                         <div
                             className={styles['slider-item']}
                             style={{
                                 alignItems: 'center',
                                 // marginBottom: '200px',
                                 userSelect: 'none',
+                                opacity: movie?.id ? 1 : 0.15
                             }}
                         >
                             <img
                                 className={styles['movie-cover']}
-                                src={movie.large_cover_image}
+                                src={movie?.large_cover_image}
                                 style={{
                                     maxWidth: '150px',
                                     textAlign: 'center',
                                     borderRadius: '10px',
                                     userSelect: 'none',
                                 }}
-                                alt={movie.title}
+                                alt={movie?.title}
                             />
                         </div>
                         </Link>

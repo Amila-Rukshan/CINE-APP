@@ -8,10 +8,16 @@
 
 .movie-cover { 
     cursor: pointer !important;
-    border-radius: 10px !important;
     margin: 0 auto;
     transition: 0.1s border;
-    z-index: 1000 !important;
+    min-width: 150px;
+    min-height: 225px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #ecececa1;
+    background-image: url(/logo.svg);
+    background-repeat:no-repeat;
+    background-position: center center;
     /* -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(20%, transparent) , to(rgba(250, 250, 250, 0.1))); */
 }
 
@@ -19,7 +25,6 @@
     transform: scale(1.03); 
     border-left: 10px solid #ffbb00;
     /* border-right: px solid #ffbb00; */
-    border-radius: 0px !important;
 }
 
 .arrows {
