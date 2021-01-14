@@ -47,7 +47,7 @@ export default function Home() {
                             color: 'rgb(223, 163, 0)',
                             fontWeight: 600,
                             textShadow: `0 0 100px rgb(223, 191, 191)`,
-                            animation: 'text-flicker 3s linear infinite',
+                            animation: 'text-flicker 3s linear 1',
                         }}
                     >
                         CI<span id="offset">N</span>E APP

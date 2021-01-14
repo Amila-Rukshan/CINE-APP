@@ -40,7 +40,7 @@ body {
   }
 
   #offset {
-    animation: letter-flicker 2s linear infinite;
+    animation: letter-flicker 2s linear 1;
   }
 
   @keyframes text-flicker {
