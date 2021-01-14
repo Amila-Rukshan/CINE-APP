@@ -42,7 +42,16 @@ export default function Home() {
                     }}
                 >
                     Download movies for free via{' '}
-                    <span style={{ color: 'rgb(223, 163, 0)', fontWeight: 600 }}>CINE APP</span>
+                    <span
+                        style={{
+                            color: 'rgb(223, 163, 0)',
+                            fontWeight: 600,
+                            textShadow: `0 0 100px rgb(223, 191, 191)`,
+                            animation: 'text-flicker 3s linear infinite',
+                        }}
+                    >
+                        CI<span id="offset">N</span>E APP
+                    </span>
                 </div>
                 <div
                     style={{

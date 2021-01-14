@@ -1,4 +1,4 @@
-import '../styles/styles.css'
+import '../styles/styles.scss'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import Layout from '../components/layout'
