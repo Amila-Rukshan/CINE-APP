@@ -30,18 +30,27 @@ const MovieView = ({ movie }) => {
                 />
                 <meta property="og:image:width" content="500" />
                 <meta property="og:image:height" content="750" />
-                <script data-ad-client="ca-pub-2228533750363168" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <script
+                    data-ad-client="ca-pub-2228533750363168"
+                    async
+                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+                ></script>
             </Head>
             <div className="page-container">
                 <div style={{ padding: '10px' }}>
                     {/* <!-- add format one --> */}
-                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                    <ins className="adsbygoogle"
-                        style={{display: 'block'}}
+                    <script
+                        async
+                        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+                    ></script>
+                    <ins
+                        className="adsbygoogle"
+                        style={{ display: 'block' }}
                         data-ad-client="ca-pub-2228533750363168"
                         data-ad-slot="5147353463"
                         data-ad-format="auto"
-                        data-full-width-responsive="true"></ins>
+                        data-full-width-responsive="true"
+                    ></ins>
                     <script>
                         (adsbygoogle = window.adsbygoogle || []).push({});
                     </script>
@@ -76,11 +85,24 @@ const MovieView = ({ movie }) => {
                     </a>
                     <h1 style={{ color: '#FFBB00', margin: '0' }}>
                         {movie.title_english}{' '}
+                        <span
+                            style={{ color: '#FFF' }}
+                        >{`- ${movie.year}`}</span>
                     </h1>
                     <div style={{ marginTop: '10px', marginBottom: '15px' }}>
                         {movie?.genres &&
                             movie?.genres.map((genre) => (
-                                <span style={{ padding: '3px 10px', backgroundColor: '#FFF', color: '#020916', marginRight: '5px', borderRadius: '5px' }}>{genre}</span>
+                                <span
+                                    style={{
+                                        padding: '3px 10px',
+                                        backgroundColor: '#FFF',
+                                        color: '#020916',
+                                        marginRight: '5px',
+                                        borderRadius: '5px',
+                                    }}
+                                >
+                                    {genre}
+                                </span>
                             ))}
                     </div>
                     <div
