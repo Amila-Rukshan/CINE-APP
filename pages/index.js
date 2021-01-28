@@ -13,6 +13,7 @@ export default function Home() {
                     async
                     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
                 ></script>
+                <meta name="google-site-verification" content="2khcBYVmiR3Hlgvu_c5OITo7sQgaN3OHLE3sXtaFZqA" />
             </Head>
             <div className="page-container">
                 {/* <!-- add format one --> */}
