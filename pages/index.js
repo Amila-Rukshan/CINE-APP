@@ -14,6 +14,7 @@ export default function Home() {
                     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
                 ></script>
                 <meta name="google-site-verification" content="2khcBYVmiR3Hlgvu_c5OITo7sQgaN3OHLE3sXtaFZqA" />
+                <meta name="clckd" content="b9385dfad483d6eb893a3d243f7e89e6" />
             </Head>
             <div className="page-container">
                 {/* <!-- add format one --> */}
