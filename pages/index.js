@@ -8,16 +8,7 @@ export default function Home() {
             <Head>
                 <title>CINE APP</title>
                 <link rel="icon" href="/favicon.ico" />
-                <script
-                    data-ad-client="ca-pub-2228533750363168"
-                    async
-                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-                ></script>
-                <meta
-                    name="google-site-verification"
-                    content="2khcBYVmiR3Hlgvu_c5OITo7sQgaN3OHLE3sXtaFZqA"
-                />
-                <meta name="clckd" content="b9385dfad483d6eb893a3d243f7e89e6" />
+                <script type="text/javascript" src="https://vdbaa.com/pup.php?section=General&pt=2&pub=391121&ga=g"></script>
                 <meta property="og:title" content={`CINE APP`} />
                 <meta
                     property="og:description"
